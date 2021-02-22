@@ -1,15 +1,15 @@
-# terraform-azurerm-network-security-group
+# terraform-azure-nsg
 
 ## Create a network security group
 
 This Terraform module deploys a Network Security Group (NSG) in Azure.
 
-## Usage with the pre-defined module
+## Usage 
 
 
 ```hcl
 module "nsg_frontend" {
-  source              = "./modules/nsg"
+  source              = "git@github.com:ignasiduran/terraform-azure-nsg.git"
   resource_group_name = azurerm_resource_group.rg.name
   location            = var.general.location
   security_group_name = "nsg-frontend"
